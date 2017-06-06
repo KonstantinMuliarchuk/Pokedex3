@@ -21,6 +21,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
+            let pokemon = Pokemon(name: "pokemon", pokedexId: indexPath.row)
+            cell.configureCell(pokemon: pokemon)
             return cell
         } else {
             return UICollectionViewCell()
@@ -37,8 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 105, height: 105)
-        
+        <#code#>
     }
 
 
